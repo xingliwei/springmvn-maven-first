@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class Helloworld {
-    @RequestMapping("hello")
+    @RequestMapping("/hello")
     public String hello(HttpServletRequest request){
         request.setAttribute("message","hello springmvc-maven!");
         return "hello";

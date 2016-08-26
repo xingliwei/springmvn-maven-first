@@ -71,7 +71,7 @@
 
     <profiles>
         <profile>
-            <id>test</id>
+            <id>dev</id>
             <properties>
                 <env>dev</env>
             </properties>
