@@ -54,7 +54,7 @@
         </resources>
 
         <filters>
-            <filter>src/main/resources/config-${env}.properties</filter>
+            <filter>src/main/filters/config-${env}.properties</filter>
         </filters>
 
     </build>
