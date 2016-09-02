@@ -8,7 +8,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/spring/springMvc.xml</param-value>
+            <param-value>classpath:applicationContext.xml</param-value>
         </init-param>
         <init-param>
             <param-name>throwExceptionIfNoHandlerFound</param-name>
@@ -29,5 +29,13 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
+
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
 </web-app>

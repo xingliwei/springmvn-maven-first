@@ -12,6 +12,20 @@
 
     <context:property-placeholder location="classpath*:application.properties"/>
 
-    <context:component-scan base-package="com.xlw.test"/>
+    <context:component-scan base-package="com.xlw"/>
+
+    <mvc:annotation-driven/>
+
+    <mvc:default-servlet-handler />
+
+    <mvc:interceptors>
+        <bean class="com.xlw.interceptor.SessionInterceptor"/>
+    </mvc:interceptors>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
 
 </beans>
